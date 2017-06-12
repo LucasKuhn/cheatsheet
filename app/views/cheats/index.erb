@@ -1,0 +1,20 @@
+<h1>What a jump! 😷 </h1>
+
+<form action="/cheat/new" method="post">
+  <label>Title</label>
+  <br>
+  <input type="text" name="cheat[title]"><br>
+  <label>Content</label>
+  <br>
+  <textarea rows="4" cols="50" name="cheat[content]"></textarea>
+  <br>
+  <input type="submit" value="Submit">
+</form>
+
+<% Cheat.all.each do |cheat| %>
+  <p style="text-align: center"><b><%= cheat.title %></b><p>
+  <pre><%= cheat.content %></pre>
+<% end %>
+<br>
+<pre class="cheat-float">
+
