@@ -15,13 +15,16 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
+  <!-- PRISM -->
+  <link href="themes/prism.css" rel="stylesheet" />
   <title></title>
 </head>
 <body>
 
-  <div class="container">
+  <%= erb :'_navbar' %>
   <%= yield %>
-  </div>
 
+  <!-- PRISM -->
+  <script src="prism.js"></script>
 </body>
 </html>

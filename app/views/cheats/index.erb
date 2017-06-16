@@ -1,20 +1,27 @@
-<h1>What a jump! 😷 </h1>
+<div class="container">
 
-<form action="/cheat/new" method="post">
-  <label>Title</label>
-  <br>
-  <input type="text" name="cheat[title]"><br>
-  <label>Content</label>
-  <br>
-  <textarea rows="4" cols="50" name="cheat[content]"></textarea>
-  <br>
-  <input type="submit" value="Submit">
-</form>
+  <h1> Make your cheat sheet! 🤓 </h1>
+  <div class="new-cheat-form">
+    <form action="/cheat/new" method="post">
+      <label>Title</label>
+      <br>
+      <input type="text" name="cheat[title]"><br>
+      <label>Content</label>
+      <br>
+      <textarea name="cheat[content]"></textarea>
+      <br>
+      <input class="submit-as-link" type="submit" value="Add Cheat!">
+    </form>
+  </div>
 
-<% Cheat.all.each do |cheat| %>
-  <p style="text-align: center"><b><%= cheat.title %></b><p>
-  <pre><%= cheat.content %></pre>
-<% end %>
-<br>
-<pre class="cheat-float">
-
+  <% Cheat.all.each do |cheat| %>
+    <div class="cheat-title">
+      <p><%= cheat.title %><p>
+    </div>
+    <div class="cheat-content">
+      <pre><%= cheat.content.gsub("<","&lt;") %></pre>
+    </div>
+    <h1>TEST BELOW:</h1>
+    <pre><code class="language-css">p { color: red }</code></pre>
+  <% end %>
+</div>

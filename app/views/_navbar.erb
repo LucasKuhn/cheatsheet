@@ -1,0 +1,12 @@
+<div class="navbar link-as-text">
+  <div id="Home"><a href="/"> HOME</a></div>
+
+  <div id="navbar-title"> A wild navbar appeared 😱</div>
+  <% if logged_in? %>
+    <div class="float-right"><a href="/session/logout">LOGOUT</a></div>
+    <div class="float-right"><a href="/user/<%= session[:id] %>"><%= current_user.username %></a></div>
+  <% else %>
+    <div><a href="/session/login">LOGIN</a></div>
+    <div><a href="/user/new">REGISTER</a></div>
+  <% end %>
+</div>
