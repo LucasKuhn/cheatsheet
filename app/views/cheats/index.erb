@@ -1,27 +1,12 @@
 <div class="container">
 
-  <h1> Make your cheat sheet! 🤓 </h1>
-  <div class="new-cheat-form">
-    <form action="/cheat/new" method="post">
-      <label>Title</label>
-      <br>
-      <input type="text" name="cheat[title]"><br>
-      <label>Content</label>
-      <br>
-      <textarea name="cheat[content]"></textarea>
-      <br>
-      <input class="submit-as-link" type="submit" value="Add Cheat!">
-    </form>
-  </div>
-
-  <% Cheat.all.each do |cheat| %>
-    <div class="cheat-title">
-      <p><%= cheat.title %><p>
-    </div>
-    <div class="cheat-content">
-      <pre><%= cheat.content.gsub("<","&lt;") %></pre>
-    </div>
-    <h1>TEST BELOW:</h1>
-    <pre><code class="language-css">p { color: red }</code></pre>
+  <% sheet.cheats.all.each do |cheat| %>
+    <div class="cheat-title"><p><%= cheat.title %><p></div>
+    <pre class="prettyprint cheat-content"><%= cheat.content.gsub("<","&lt;") %></pre>
   <% end %>
+
+  <% if logged_in? && creator? %>
+    <%= erb :'/cheats/_new_cheat_form' %>
+  <% end %>
+
 </div>

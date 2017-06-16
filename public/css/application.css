@@ -1,80 +1,131 @@
-pre{
-  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
-  margin-bottom: 10px;
-  overflow: auto;
-  width: auto;
-  padding: 5px;
-  background-color: #eee;
-  width: 650px!ie7;
-  padding-bottom: 20px!ie7;
-  max-height: 600px;
+body {
+  background-color: #161616;
+  color:white;
+  font-family: Helvetica;
 }
+
+.sheets-title {
+ text-align: center;
+ border-bottom: 1px dotted white;
+ padding-bottom: 5px;
+ font-weight: normal!important;
+}
+
+.sheet-title h2 {
+  font-weight: normal!important;
+}
+
+
+.sidebar {
+  flex-basis: 33.33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start
+}
+
+.sheet-title {
+  text-align: center;
+}
+
+.cheat-content {
+  margin-top: -10px!important;
+}
+
+.new-sheet-form input {
+  width:100%;
+  box-sizing:border-box;
+  background-color: black;
+  text-align: center;
+  padding: 12px 20px;
+  border: none;
+}
+
 .new-cheat-form input {
   width:100%;
   box-sizing:border-box;
+  background-color: #161616;
+  border: 0.5px solid grey;
 }
 
 .new-cheat-form textarea {
-    height: 80px;
-    width: 100%;
-    box-sizing:border-box;
+  height: 80px;
+  width: 100%;
+  box-sizing:border-box;
+  background-color: black;
+  border: none;
+  resize: none;
 }
-script {
-  display: block;
+
+.new-cheat-form h2 {
+  text-align: center;
+  margin-bottom: -10px;
+  font-weight: normal!important;
 }
 
 .cheat-title {
-  /*font-weight: bold;*/
   text-align: center;
   color:white;
-  background-color: #1d5c7f
+  background-color: none;
 }
+
 .cheat-content {
   margin-top: -15px;
   background-color: #3acfe0
 }
 .container {
   margin: 20px auto;
-  width: 800px;
+  width: 600px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  /*border: 1px dotted black;*/
 }
+
 th {
   text-align: left;
 }
 
 .submit-as-link {
-  background: none!important;
-  border: none;
-  padding:0!important;
-  color: -webkit-link;
-  text-decoration: underline;
-  /*font:inherit;
-  cursor: auto;*/
+  background: grey!important;
+  border: none!important;
+  padding: 0!important;
+  color: black;
+  text-decoration: none;
+  font:inherit;
+  cursor: auto;
 }
 
-/*------------*/
+/*---------------------------*/
 
-/*---NEW USER FORM---*/
+
+/*------NEW USER FORM------*/
 .new-user form {
   text-align: center;
 }
 
 .new-user input[type=text], input[type=password] {
+  background-color: black;
   text-align: center;
   width: 50%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+  border: none;
   box-sizing: border-box;
 }
 
 .new-user button {
+  background-color: grey;
   box-sizing: border-box;
   width: 50%;
+  height: 50px;
+  border: none;
 }
-/*------------*/
+
+.new-user button:hover {
+  background-color: black;
+}
+
+/*---------------------------*/
+
 
 /*---NAVBAR---*/
 .navbar {
@@ -101,9 +152,9 @@ th {
 
 .navbar #navbar-title {
   float: right;
-  font-family: 'Calibri';
-  border-left: 2px solid white;
+  border-left: 2px solid #0c4954;
 }
+
 .navbar #navbar-title:hover {
   background-color: inherit;
 }
@@ -112,11 +163,11 @@ th {
   vertical-align: middle;
   text-decoration: none;
   color: white;
-  font-family: 'Georgia';
 }
-/*------------*/
+/*---------------------------*/
 
-/*---ERRORS---*/
+
+/*------ERRORS------*/
 .error {
   margin: 20px auto;
   width: 600px;
@@ -129,11 +180,20 @@ th {
   text-align: center;
 }
 
-/*--------------*/
-.sidebar {
-  flex-basis: 33.33%;
-  display: flex;
-  flex-direction: column;
-  justify-content: start
-}
-Contact GitHub API Training Shop Blog About
+/*---------------------------*/
+
+
+/*---------OLD CSS---------*/
+/*pre{
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  margin-bottom: 10px;
+  overflow: auto;
+  width: auto;
+  padding: 5px;
+  background-color: #eee;
+  width: 650px!ie7;
+  padding-bottom: 20px!ie7;
+  max-height: 600px;
+  margin-top: -15px;
+  border: none!important;
+}*/

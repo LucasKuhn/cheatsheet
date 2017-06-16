@@ -1,10 +1,10 @@
-get '/session/logout' do
+get '/sessions/logout' do
   logout
   redirect '/'
 end
 
-get '/session/login' do
-  erb :'session/new'
+get '/sessions/login' do
+  erb :'sessions/new'
 end
 
 post '/login' do

@@ -7,16 +7,12 @@
     See: http://necolas.github.com/normalize.css/
   -->
   <link rel="stylesheet" href="/css/normalize.css">
-  <!--
-    application.css is where you put your styles
-  -->
+  <!-- application.css is where you put your styles -->
   <link rel="stylesheet" href="/css/application.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
-  <!-- PRISM -->
-  <link href="themes/prism.css" rel="stylesheet" />
   <title></title>
 </head>
 <body>
@@ -24,7 +20,7 @@
   <%= erb :'_navbar' %>
   <%= yield %>
 
-  <!-- PRISM -->
-  <script src="prism.js"></script>
+  <!-- GOOGLE CODE PRETTIFY -->
+  <script src="https://rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true&amp;skin=sunburst&amp;lang=css"></script>
 </body>
 </html>

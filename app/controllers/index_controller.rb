@@ -1,3 +1,7 @@
 get '/' do
-  redirect '/cheat'
+  if logged_in?
+    redirect '/sheets'
+  else
+    redirect '/user/new'
+  end
 end

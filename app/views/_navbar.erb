@@ -3,10 +3,10 @@
 
   <div id="navbar-title"> A wild navbar appeared 😱</div>
   <% if logged_in? %>
-    <div class="float-right"><a href="/session/logout">LOGOUT</a></div>
+    <div class="float-right"><a href="/sessions/logout">LOGOUT</a></div>
     <div class="float-right"><a href="/user/<%= session[:id] %>"><%= current_user.username %></a></div>
   <% else %>
-    <div><a href="/session/login">LOGIN</a></div>
+    <div><a href="/sessions/login">LOGIN</a></div>
     <div><a href="/user/new">REGISTER</a></div>
   <% end %>
 </div>

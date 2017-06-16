@@ -1,5 +1,13 @@
 <div class="container">
-  <h1>This is your profile page!</h1>
-  <p>Lots of cool stuff here like your username: <%= @user.username %></p>
-  <p>And your email: <%= @user.email %></p>
+
+  <%= erb :'sheets/_new_sheet_form' %>
+
+  <h1 class="sheets-title">Your Sheets</h1>
+
+  <% @user.sheets.all.each do |sheet| %>
+    <div class="sheet-title link-as-text">
+      <h2><a href="/sheets/<%= sheet.id %>/cheats"><%= sheet.name %></a><h2>
+    </div>
+  <% end %>
+
 </div>

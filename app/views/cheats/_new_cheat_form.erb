@@ -1,0 +1,13 @@
+<div class="new-cheat-form">
+  <h2> ↓ ADD A CHEAT ↓ </h2>
+  <form action="/sheets/<%= @sheet.id %>/cheats" method="post">
+    <label>Title</label>
+    <br>
+    <input type="text" name="cheat[title]" required><br>
+    <label>Content</label>
+    <br>
+    <textarea name="cheat[content]" required></textarea>
+    <br>
+    <input class="submit-as-link" type="submit" value="Add Cheat!">
+  </form>
+</div>

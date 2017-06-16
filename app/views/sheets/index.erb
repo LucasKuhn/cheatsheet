@@ -1,0 +1,11 @@
+<div class="container">
+
+<h1 class="sheets-title">SHEETS AVAILABLE!</h1>
+
+<% Sheet.all.each do |sheet| %>
+  <div class="sheet-title link-as-text">
+    <h2><a href="/sheets/<%= sheet.id %>/cheats"><%= sheet.name %></a><h2>
+  </div>
+<% end %>
+
+</div>
